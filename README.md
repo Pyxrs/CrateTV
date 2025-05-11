@@ -1,2 +1,3 @@
 # CrateTV
- A simple gaming streaming service
+
+A simple game streaming service built with Dioxus
