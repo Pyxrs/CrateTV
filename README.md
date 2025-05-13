@@ -20,6 +20,7 @@ A simple game streaming service built with `SvelteKit` and `Axum`
 - [ ] Account page
   - [ ] Log in / Sign up system
   - [ ] Stream key
+- [ ] Search bar that displays best matches
 
 ### Server
 

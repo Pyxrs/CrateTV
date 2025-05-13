@@ -1,13 +1,7 @@
 <script lang="ts">
   import logo from "$lib/images/logo.svg";
   import account from "$lib/images/account.svg";
-  import { goto } from "$app/navigation";
   let searchTerm = "";
-
-  function handleSearch(event: Event) {
-    event.preventDefault();
-    goto(`/${encodeURIComponent(searchTerm)}`);
-  }
 </script>
 
 <header>
@@ -17,12 +11,7 @@
     </a>
   </div>
 
-  <form
-    class="search-container"
-    on:submit|preventDefault={handleSearch}
-    role="search"
-    aria-label="Site search"
-  >
+  <form class="search-container" role="search" aria-label="Site search">
     <input
       type="text"
       placeholder="Search..."

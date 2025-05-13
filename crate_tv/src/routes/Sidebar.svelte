@@ -70,7 +70,10 @@
     width: 220px;
     background: var(--color-bg-2);
     border-radius: 12px;
-    padding: 1rem 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     margin-left: 0.5rem;
     margin-top: 1rem;
     margin-right: 0rem;
