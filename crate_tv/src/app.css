@@ -1,0 +1,111 @@
+@import "@fontsource/fira-mono";
+
+:root {
+  --font-body: "Lato", Arial, sans-serif;
+  --font-mono: "Fira Mono", monospace;
+  --color-bg-1: #202124ff;
+  --color-bg-2: #2c2e33fa;
+  --color-bg-3: #25272bfa;
+  --color-theme-1: #7289da;
+  --color-theme-2: #91a0d6;
+  --color-theme-3: #e84118;
+  --color-text-1: #ffffffeb;
+  --color-text-2: #aaaaaaeb;
+  --column-width: 42rem;
+  --column-margin-top: 4rem;
+  font-family: var(--font-body);
+  color: var(--color-text-1);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--color-bg-1);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1,
+h2,
+p {
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: var(--color-theme-1);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+
+a:hover {
+  color: var(--color-theme-2);
+  text-decoration-color: var(--color-theme-2);
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+pre {
+  font-size: 16px;
+  font-family: var(--font-mono);
+  background-color: #232428;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  padding: 1em;
+  overflow-x: auto;
+  color: var(--color-text-1);
+}
+
+.text-column {
+  display: flex;
+  max-width: 48rem;
+  flex: 0.6;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+input,
+button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (min-width: 720px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}

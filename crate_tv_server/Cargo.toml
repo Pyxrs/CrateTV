@@ -1,0 +1,26 @@
+[package]
+name = "crate_tv"
+version = "0.1.0"
+authors = ["Pyxrs <pyxrss@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"
+async-trait = "0.1"
+axum = { version = "0.8" }
+axum_session = "0.16"
+axum_session_auth = "0.16"
+axum_session_sqlx = { version = "0.5", features = ["sqlite"] }
+pstd = { git = "https://github.com/Pyxrs/pstd", features = ["uuid"] }
+rtmp = { version = "0.6" }
+serde = "1.0"
+sqlx = { version = "0.8", features = [
+    "macros",
+    "migrate",
+    "postgres",
+    "sqlite",
+    "_unstable-all-types",
+    "tls-rustls",
+    "runtime-tokio",
+] }
+tokio = { version = "1.40", features = ["full", "tracing"] }
