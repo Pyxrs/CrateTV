@@ -17,6 +17,7 @@ A simple game streaming service built with `SvelteKit` and `Axum`
 - [x] Home page that displays all streams
 - [x] Sidebar that displays followed streams
 - [x] HLS client
+- [ ] Better video player with native quality
 - [ ] Account page
   - [ ] Log in / Sign up system
   - [ ] Stream key
@@ -24,8 +25,10 @@ A simple game streaming service built with `SvelteKit` and `Axum`
 
 ### Server
 
-- [ ] Authentication and account system
-  - [ ] Login hash database
+- [x] Authentication and account system
+  - [x] Login hash database
+    - [ ] Permissions
+    - [ ] Misc data blob using bitcode (don't update major version due to incompatibility)
   - [ ] Stream key generation
 - [ ] RTMP server
   - [ ] Stream key authentication
