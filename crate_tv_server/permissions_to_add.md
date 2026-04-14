@@ -7,10 +7,10 @@
 
 ## User
 
+- Profile::EditOwn
 - Account::Follow
 - Account::Block
 - Account::EditOwn
-- Profile::EditOwn
 - StreamKey::ViewOwn
 - StreamKey::RegenerateOwn
 - Stream::StartOwn
@@ -20,8 +20,8 @@
 
 ## Admins
 
-- Account::EditAny
 - Profile::EditAny
+- Account::EditAny
 - StreamKey::ViewAny
 - StreamKey::RegenerateAny
 - Stream::StopAny

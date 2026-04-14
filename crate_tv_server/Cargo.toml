@@ -6,13 +6,15 @@ edition = "2021"
 
 [dependencies]
 pstd = { git = "https://github.com/Pyxrs/pstd", features = ["uuid", "async"] }
-actix-web = "4"
+actix-web = "4.11"
 actix-governor = "0.8"
-tokio = { version = "1", features = ["full"] }
+actix-session = "0.10"
+tokio = { version = "1.45", features = ["full"] }
 
 argon2 = "0.5"
+bitcode = "0.6" # Take care to add migration functionality when updating major version
 env_logger = "0.11"
-jsonwebtoken = "9.3"
+once_cell = "1.21"
 password-hash = "0.5"
 rtmp = { version = "0.6" }
 serde = { version = "1.0", features = ["derive"] }
@@ -23,3 +25,5 @@ sqlx = { version = "0.8", features = [
     "runtime-tokio",
     "tls-native-tls",
 ] }
+thiserror = "2.0"
+validator = "0.20"

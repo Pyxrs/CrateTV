@@ -9,6 +9,7 @@ use tokio::try_join;
 
 mod account;
 mod dummy;
+mod stream;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
@@ -23,7 +24,12 @@ async fn main() -> std::io::Result<()> {
         .finish()
         .unwrap();
 
-    let (account, dummy) = try_join!(account::AccountApp::init(), dummy::DummyApp::init()).unwrap();
+    let (account, dummy, stream) = try_join!(
+        account::AccountApp::init(),
+        dummy::DummyApp::init(),
+        stream::StreamApp::init()
+    )
+    .unwrap();
 
     HttpServer::new(move || {
         App::new()
@@ -32,8 +38,10 @@ async fn main() -> std::io::Result<()> {
                 middleware::TrailingSlash::Trim,
             ))
             .wrap(Governor::new(&governor_conf))
+            .wrap(account.session_middleware())
             .install(&account)
             .install(&dummy)
+            .install(&stream)
     })
     .bind((Ipv4Addr::LOCALHOST, 3000))?
     .run()
